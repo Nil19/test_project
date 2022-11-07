@@ -24,4 +24,13 @@ class TestController extends AbstractController
         var_dump($data);
         return $this->render('index.html.twig', $data);
     }
+    
+    /**
+    * @Route("/new_page", name="new_page")
+    */
+    public function newPage()
+    {
+        $data = [];
+        return $this->render('newPage/newPage.html.twig', $data);
+    }
 }   
