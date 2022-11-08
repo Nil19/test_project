@@ -3,6 +3,7 @@
 {% block header %}
 	<!-- Create a new twig file with the header and includ it in here printing an image and a navbar -->
 	{% include 'newPage/newPageHeader.html.twig' %}
+  
 {% endblock %}
 
 
@@ -23,17 +24,6 @@
 
 {% block footer %}
 <!-- Create a new twig file with the footer and include a 3 column -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-      </div>
-    </div>
+  {% include 'newPage/newPageFooter.html.twig' %}
+
 {% endblock %}
