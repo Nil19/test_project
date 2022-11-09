@@ -1,13 +1,37 @@
-{% extends "/base.html.twig" %}
+
 
 {% block body %}
+<section class="slider">
 	<div class="container-fluid home-body">
+	<div class="row">
 		<h2>body</h2>
-		<h4>navigation Items =
-			{{ navigation.items|length }}</h4>
+		</div>
+	<div class="row">
+		<h4>navigation Items ={{ navigation.items|length }}</h4>
+		</div>
 
 		<!-- @nil Example how to print something from the data that I shared -->
+		<div>
 		<h4>Total Reviews = {{ reviews.total }}</h4>
-		<h4>Total Services = {{ services.total }}</h4>
+		</div>
+		<div>
+		<h4>Total Services = {{ services.total}}</h4>
+		</div>
+	
+		
 	</div>
+	</div>
+</section>	
+<section class="about">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm">
+<h1> {{ about.header.title }}</h1>
+<h3>{{ about.header.subtitle }}</h3>
+<p> {{ about.section.content }} </p>
+
+</div>
+		</div>
+	</div>
+</section>
 {% endblock %}
