@@ -9,15 +9,7 @@
 
 {% block body %}
 
-    <div class="container-fluid home-body">
-        <h2>body</h2>
-        <h4>navigation Items = {{ navigation.items|length }}</h4>
-        
-        <!-- @nil Example how to print something from the data that I shared -->
-        <h4>Total Reviews = {{ reviews.total }}</h4>
-        <h4>Total Services = {{ services.total }}</h4>
-    </div>
-    
+{% include 'newPage/newPageBody.html.twig' %}    
 	
 {% endblock %}
 
