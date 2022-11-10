@@ -48,7 +48,6 @@ class TestController extends AbstractController
         you will need to learn the stucture of each and then try to print into the new page
         */
         //var_dump($data);
-        
         return $this->render('newPage/newPage.html.twig', $data);
     }
 }   
