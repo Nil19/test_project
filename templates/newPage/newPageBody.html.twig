@@ -19,6 +19,7 @@
 		</div>
 	</div>
 </section>	
+<!-- About Page -->
 <section class="about">
 	<div class="container-fluid">
 		<div class="row">
@@ -31,4 +32,48 @@
 		</div>
 	</div>
 </section>
+<!-- End About Page -->
+
+<!-- Services Page -->
+<section class="">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Services</h3>
+				{% for services in services.data %}
+				{{ services.header.title }}
+				<br>
+				{{ services.header.subtitle | slice (0, 40) }}
+				{% if services.header.subtitle | length > 40 %}...
+				{% endif %}
+			</div>
+		</div>
+	</div>
+				{% endfor %}
+</section>
+<!-- End Services Page -->
+<!-- Reviews Page -->
+<section class="">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Reviews</h3>
+					{% for reviews in reviews.data.items %}
+					{{ reviews.content.title }}
+					<br>
+					{{ reviews.content.content | slice(0, 40) }}
+					{% if reviews.content.title | length > 30 %}...
+					{% endif %}
+					<br>
+					{{reviews.provider.company}}
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+					{% endfor %}
+</section>
+
+<!-- End Reviews Page -->
 {% endblock %}
