@@ -1,20 +1,22 @@
 <section class="footer">
-	<div class="container-fluid">
+	<div class="container text-center">
+		<h2>Footer</h2>
+	</div>
+	<div class="container text-center">
 		<div class="row">
-			<div class="col-sm">
-			<h2>Footer</h2>
-				<h4> {{ about.header.title }}</h4>
-				<p>{{ about.header.subtitle }}</p>
-			</div>
-			<div class="col-sm">
-				<h4>Our Company </h4>
-				{% for navigation in navigation.items %}
-					{{ navigation.title }}
-				{% endfor %}
-			</div>
-			<div class="col-sm">
-				<h4>Contact Us</h4>
-			</div>
+				<div class="col-sm">
+					<h4> {{ about.header.title }}</h4>
+					<p>{{ about.header.subtitle }}</p>
+				</div>
+				<div class="col-sm">
+					<h4>Our Company </h4>
+					{% for navigation in navigation.items %}
+						{{ navigation.title }}
+					{% endfor %}
+				</div>
+				<div class="col-sm">
+					<h4>Contact Us</h4>
+				</div>
 		</div>
 	</div>
 </section>
