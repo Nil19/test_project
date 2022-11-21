@@ -1,5 +1,9 @@
 {% block stylesheets %}
 	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="owl.carousel/dist/assets/owl.carousel.css">
+	<link rel="stylesheet" href="owl.carousel/dist/assets/owl.theme.default.min.css">
+
 {% endblock %}
 
 {% block body %}
@@ -7,9 +11,6 @@
 	<div class="container-fluid home-body">
 		<div class="row">
 			<h2>body</h2>
-		</div>
-		<div class="row">
-			<h4>navigation Items ={{ navigation.items|length }}</h4>
 		</div>
 
 		<!-- @nil Example how to print something from the data that I shared -->
@@ -23,66 +24,52 @@
 </section>	
 <!-- About Page -->
 <section class="about">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm">
-				<h1> {{ about.header.title }}</h1>
-				<h3>{{ about.header.subtitle }}</h3>
-				<p> {{ about.section.content }} </p>
+	<div class="container text-center">
+		<h1> {{ about.header.title }}</h1>
+			<div class="row">
+				<div class="col-sm">
+					<h4>{{ about.header.subtitle }}</h4>
+					<p> {{ about.section.content }} </p>
 
+				</div>
 			</div>
-		</div>
 	</div>
 </section>
 <!-- End About Page -->
 
 <!-- Services Page -->
-<section class="">
-	<div class="container text-center">
-			<h2>Services</h2>
-  				<div class="row align-items-start">
-			
-					<div class="col">
-						{% for services in services.data %}
-					{{ services.header.title }}
-					<br>
-					{{ services.header.subtitle | slice (0, 40) }}
-					{% if services.header.subtitle | length > 40 %}...
-					{% endif %}
-					</div>
-					<div class="col">
-						One of three columns
-					</div>
-					<div class="col">
-						One of three columns
-					</div>
-				</div>
+<section class="services">
+			<div class="container text-center">
+				<div class="row">
+					{% for services in services.data %}
+						<div class="row">
+							<div class="col-sm-3">
+								<h4>{{services.header.title}}</h4>
+								<p>{{ services.header.subtitle |striptags | slice(0, 200) | raw}}
+								</p>
+							</div>
+						</div>
 					{% endfor %}
-	</div>				
+				</div>
+			</div>				
 </section>
+{% endblock %}
 <!-- End Services Page -->
 <!-- Reviews Page -->
-<section class="">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-3">
-				<h3>Reviews</h3>
-					{% for reviews in reviews.data.items %}
-					{{ reviews.content.title }}
-					<br>
-					{{ reviews.content.content | slice(0, 40) }}
-					{% if reviews.content.title | length > 30 %}...
-					{% endif %}
-					<br>
-					{{reviews.provider.company}}
-
-				
-			</div>
-
-		</div>
-	</div>
-					{% endfor %}
+<section class="reviews">
+			<div class="container">
+					<div class="row">
+						<div class="owl.carousel owl.theme">
+							{% for reviews in reviews.data.items %}
+								<div class="row">
+									<div class="col-sm-4">
+										<h4>{{reviews.content.title}}</h4>
+										</p>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>				
 </section>
-
-<!-- End Reviews Page -->
-{% endblock %}
