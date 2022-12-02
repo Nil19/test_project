@@ -1,0 +1,29 @@
+<!-- Reviews Page -->
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col col-sm-12">
+				<h2>REVIEWS</h2>
+			</div>
+		</div>
+		<div class="row">
+			{% for reviews in reviews.data.items %}
+				<div class="col-sm">
+					<div>
+						<h4>{{reviews.content.title}}</h4>
+					</div>
+					<div>
+					 {{ reviews.completed.date | slice(0, 10) }}
+					</div>
+					<div>
+						{{reviews.content.content}}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>				
+</section>
+<br>
+<br>
+<!-- make loops with reviews. 10 times. open and close rows every 3 times and create new div. index loop. how to identify index in twig  -->
+<!-- 
