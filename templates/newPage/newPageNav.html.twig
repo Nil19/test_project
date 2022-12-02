@@ -7,6 +7,31 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
+        {% for navigation in navigation.items %}
+        {% if navigation.linkActive %}
+        {% endif %}
+              <a id="{{ navigation.slug }}" class="nav_{{ navigation.route }}" href="{{ navigation.href }}">{{ navigation.title }}</a>
+          </li>
+        {% else %}
+								<li class="dropdown">
+									<a
+									{% if navigation.href != "/%23" %}  href="{{ navigation.href }}" {% else %} data-toggle="dropdown" {% endif %}
+									id="{{ navigation.slug }}" 
+									class="dropdown-toggle nav_{{ navigation.route }} {% if navigation.linkActive %} active select{% endif %}" role="button" aria-haspopup="true" aria-expanded="true">
+										{{ navigation.title }}
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										{% for subitems in navigation.subitems %}
+											<li class="{% if subitems.linkActive %} active select{% endif %}">
+												<a id="{{ subitems.slug }}" href="{{ subitems.href }}" class="nav_{{ subitems.route }}">
+												{{ subitems.title }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</li>
+						{% endfor %}
+        
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
