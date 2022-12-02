@@ -1,0 +1,63 @@
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        {% for navigation in navigation.items %}
+        {% if navigation.linkActive %}
+        {% endif %}
+              <a id="{{ navigation.slug }}" class="nav_{{ navigation.route }}" href="{{ navigation.href }}">{{ navigation.title }}</a>
+          </li>
+        {% else %}
+								<li class="dropdown">
+									<a
+									{% if navigation.href != "/%23" %}  href="{{ navigation.href }}" {% else %} data-toggle="dropdown" {% endif %}
+									id="{{ navigation.slug }}" 
+									class="dropdown-toggle nav_{{ navigation.route }} {% if navigation.linkActive %} active select{% endif %}" role="button" aria-haspopup="true" aria-expanded="true">
+										{{ navigation.title }}
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										{% for subitems in navigation.subitems %}
+											<li class="{% if subitems.linkActive %} active select{% endif %}">
+												<a id="{{ subitems.slug }}" href="{{ subitems.href }}" class="nav_{{ subitems.route }}">
+												{{ subitems.title }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</li>
+						{% endfor %}
+        
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Boiler Installations </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Boiler Repairs </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Boiler Servicing</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" href="#">Reviews</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#" href="#">Gallery</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#" href="#">Blog</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#" href="#">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">test</button>
+    </form>
+  </div>
+</nav>
