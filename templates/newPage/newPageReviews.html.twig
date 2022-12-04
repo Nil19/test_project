@@ -2,23 +2,25 @@
 <section>
 	<div class="container">
 		<div class="row">
-			<div class="col col-sm-12">
+			<div class="col col-sm">
 				<h2>REVIEWS</h2>
 			</div>
 		</div>
 		<div class="row">
 			{% for reviews in reviews.data.items %}
-				<div class="col-sm">
-					<div>
-						<h4>{{reviews.content.title}}</h4>
+				{% if  loop.index % 3 == 0 %}
+					<div class="col-sm">
+						<div>
+							<h4>{{reviews.content.title}}</h4>
+						</div>
+						<div>
+						{{ reviews.completed.date | slice(0, 10) }}
+						</div>
+						<div>
+							{{reviews.content.content}}
+						</div>
 					</div>
-					<div>
-					 {{ reviews.completed.date | slice(0, 10) }}
-					</div>
-					<div>
-						{{reviews.content.content}}
-					</div>
-				</div>
+				{% endif %}
 			{% endfor %}
 		</div>
 	</div>				
