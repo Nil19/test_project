@@ -4,17 +4,16 @@
 	</div>
 	<div class="container text-center">
 		<div class="row">
-				<div class="col col-sm">
-						<h4> {{ about.header.title }}</h4>
-						<p>{{ about.header.subtitle }}</p>
-				</div>
-				<div class="col col-sm">
+				<div class="col col-sm-3">
 					<h4>Our Company </h4>
 					{% for navigation in navigation.items %}
-						{{ navigation.title }}
+						<ul>
+							<a id="{{ navigation.slug }}" href="{{ navigation.href }}" class="nav_{{ navigation.route }}">
+							{{ navigation.title }}</a>
+						</ul>
 					{% endfor %}
 				</div>
-				<div class="col col-sm">
+				<div class="col col-sm-3">
 					<h4>Contact Us</h4>
 				</div>
 		</div>

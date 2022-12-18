@@ -7,21 +7,21 @@
 			</div>
 		</div>
 		<div class="row">
-			{% for reviews in reviews.data.items %}
-				{% if  loop.index % 3 == 0 %}
-					<div class="col-sm">
-						<div>
-							<h4>{{reviews.content.title}}</h4>
+			<div class="owl-carousel owl-theme">
+				{% for reviews in reviews.data.items %}
+						<div class="item">
+							<div>
+								<h4>{{reviews.content.title}}</h4>
+							</div>
+							<div>
+							{{ reviews.completed.date | slice(0, 10) }}
+							</div>
+							<div>
+								{{reviews.content.content}}
+							</div>
 						</div>
-						<div>
-						{{ reviews.completed.date | slice(0, 10) }}
-						</div>
-						<div>
-							{{reviews.content.content}}
-						</div>
-					</div>
-				{% endif %}
-			{% endfor %}
+				{% endfor %}
+			</div>
 		</div>
 	</div>				
 </section>

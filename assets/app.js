@@ -27,3 +27,8 @@ $(document).ready(function () {
 
 
 console.log('Main   assets imported');
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+    });
+});

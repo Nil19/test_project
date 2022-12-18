@@ -10,7 +10,7 @@
          {% for navigation in navigation.items %}
         {% if navigation.linkActive %}
         {% endif %}
-              <a id="{{ navigation.slug }}" class="nav_{{ navigation.route }}" href="{{ navigation.href }}">{{ navigation.title }}</a>
+              <a id="{{ navigation.slug }}" class="nav_{{ navigation.route }}" href="{{ navigation.href }}">{{ navigation.title }} </a>
           </li>
         {% else %}
 								<li class="dropdown">
