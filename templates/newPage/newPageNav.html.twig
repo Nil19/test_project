@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Company Name</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
          {% for navigation in navigation.items %}
@@ -13,11 +13,11 @@
               <a id="{{ navigation.slug }}" class="nav_{{ navigation.route }}" href="{{ navigation.href }}">{{ navigation.title }} </a>
           </li>
         {% else %}
-								<li class="dropdown">
+								<li class="nav-item dropdown">
 									<a
 									{% if navigation.href != "/%23" %}  href="{{ navigation.href }}" {% else %} data-toggle="dropdown" {% endif %}
 									id="{{ navigation.slug }}" 
-									class="dropdown-toggle nav_{{ navigation.route }} {% if navigation.linkActive %} active select{% endif %}" role="button" aria-haspopup="true" aria-expanded="true">
+									class="nav-link dropdown-toggle nav_{{ navigation.route }} {% if navigation.linkActive %} active select{% endif %}" role="button" aria-haspopup="true" aria-expanded="true">
 										{{ navigation.title }}
 									</a>
 									<ul class="dropdown-menu">
