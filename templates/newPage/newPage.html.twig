@@ -1,7 +1,11 @@
-{% extends "newPage/newPageBase.html.twig" %}
+{% extends "newPage/newPageBase.html.twig" %}    
+
+
+
 
 {% block header %}
 	<!-- Create a new twig file with the header and includ it in here printing an image and a navbar -->
+	{% include 'newPage/newPageNav.html.twig' %}
 	{% include 'newPage/newPageHeader.html.twig' %}
   
 {% endblock %}
@@ -9,10 +13,13 @@
 
 {% block body %}
 
-{% include 'newPage/newPageBody.html.twig' %}    
+
+
+{% include 'newPage/newPageAbout.html.twig' %}    
+{% include 'newPage/newPageServices.html.twig' %} 
+{% include 'newPage/newPageReviews.html.twig' %} 
 	
 {% endblock %}
-
 
 {% block footer %}
 <!-- Create a new twig file with the footer and include a 3 column -->

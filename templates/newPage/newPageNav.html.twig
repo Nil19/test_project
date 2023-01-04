@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Company Name</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="nav-list collapse navbar-collapse navbar-ex2-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                    	{% for navigation in navigation.items %}
+							{% if navigation.subitems | length == 0 %}
+								<li class="
+                					    {% if navigation.linkActive %} active select{% endif %}
+            						">
+									<a id="{{ navigation.slug }}" class="nav_{{ navigation.route }}" href="{{ navigation.href }}">{{ navigation.title }}</a>
+								</li>
+							{% else %}
+								<li class="dropdown">
+									<a
+									{% if navigation.href != "/%23" %} 
+											href="{{ navigation.href }}"  data-toggle="dropdown disabled" class="active-dropdown-href dropdown-toggle nav_{{ navigation.route }} {% if navigation.linkActive %} active select{% endif %}" 
+									{%else %}
+										data-toggle="dropdown" 
+										class="dropdown-toggle nav_{{ navigation.route }} {% if navigation.linkActive %} active select{% endif %}" 
+									{% endif %}
+									 
+									id="{{ navigation.slug }}" 
+									role="button" aria-haspopup="true" aria-expanded="true">
+										{{ navigation.title }}
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										{% for navigation in navigation.subitems %}
+											<li class="{% if navigation.linkActive %} active select{% endif %}">
+												<a id="{{ navigation.slug }}" href="{{ navigation.href }}" class="nav_{{ navigation.route }}"
+												>
+												{{ navigation.title }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</li>
+							{% endif %}
+						{% endfor %}
+                    </ul>
+                </div>
+</nav>

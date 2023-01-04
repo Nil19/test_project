@@ -18,7 +18,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.min.css';
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
-
+import './styles/main.scss';
 
 
 $(document).ready(function () {
@@ -27,3 +27,9 @@ $(document).ready(function () {
 
 
 console.log('Main   assets imported');
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+    });
+
+});
