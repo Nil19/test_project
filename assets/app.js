@@ -33,3 +33,39 @@ $(document).ready(function(){
     });
 
 });
+/* $(document).ready(function () {
+    var owlreviews = $('.owl-review');
+    owlreviews.owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        responsiveClass: true,
+        autoplayHoverPause: true,
+        dots: true,
+        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+});
+*/
+
+$(document).ready(function () {
+	$('ul.nav li.dropdown').hover(
+		function () { $(this).find('.dropdown-menu').stop(true, true).fadeIn(); }, 
+		function () { $(this).find('.dropdown-menu').stop(true, true).fadeOut(); }
+	);
+	if( $('#navbar-tel').css('display')=='none') {
+		//we want to have a hack for click on services dropdown that we need to stop on mobile we use the phone to know when to stop the href
+		$('ul.nav li.dropdown .active-dropdown-href').removeAttr("href");
+    }
+});
+

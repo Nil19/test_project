@@ -6,3 +6,284 @@ body {
 .home-body{
 	height: 350px;
 }
+
+/* HEADER */
+.header_banner {
+    min-height: auto;
+    position: relative;
+    width: 100%;
+    min-height: 20%;
+    padding: 50px 0;
+    overflow-x: clip;
+    overflow-y: clip;
+  }
+  .banner_box {
+    min-height: fit-content;
+    padding: 30px 30px;
+    background-color: #9797ca;
+    border-radius: 50px 0px 50px 0px !important;
+    color: white;
+    background-size: cover;
+  }
+  .banner_box .banner_subtitle {
+    font-family: 'Ubuntu Light';
+    font-size: 50px;
+    margin: 10px 0px;
+  }
+  .banner_box .banner_title {
+    margin: 10px 0px;
+    font-family: 'Ubuntu Light';
+    font-size: 30px;
+  }
+  .banner_box .banner_btn {
+    margin: 20px 0px 10px;
+  }
+  .banner_reviews {
+    display: none;
+  }
+  @media (max-width: ) {
+    .banner_picture, .slider_picture {
+      width: auto;
+      height: 100%;
+    }
+  }
+  .homepage_banner .banner_reviews {
+    margin: 20px 0px 10px;
+    display: block;
+    background-color: var(--main);
+    border-radius: 50px 50px;
+    font-family: 'Ubuntu Light';
+    overflow: hidden;
+  }
+  .homepage_banner .banner_reviews .banner_stars {
+    padding: 15px 10px 15px 15px;
+    background-color: white;
+    font-size: 20px;
+  }
+  .homepage_banner .banner_reviews .banner_stars i {
+    color: #d6aa43;
+  }
+  .homepage_banner .banner_reviews .banner_text {
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .homepage_banner .banner_reviews .banner_text a {
+    color: white;
+    text-decoration: none;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .homepage_banner .banner_reviews .banner_text a:hover {
+    opacity: 0.8;
+  }
+  @media (min-width: ) {
+    .homepage_banner {
+      margin-top: -150px;
+      padding: 250px 0 49px;
+    }
+  }
+  @media (max-width: ) {
+    .homepage_banner .banner_reviews .banner_text {
+      padding: 15px;
+      font-size: 18px;
+    }
+    .homepage_banner .banner_reviews .banner_stars {
+      font-size: 18px;
+    }
+  }
+  /* END HEADER */
+
+  /* ABOUT */ 
+  .homepage_about_us {
+    position: relative;
+    width: 100%;
+    min-height: 30%;
+    padding: 50px 0;
+    overflow-x: clip;
+    overflow-y: clip;
+  }
+  .homepage_about_us .banner_picture, .homepage_about_us .slider_picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    background: var(--main-80);
+  }
+  .homepage_about_us .about_us_picture {
+    border-radius: 50px 0px 50px 0px !important;
+    margin: 0 auto;
+  }
+  .homepage_about_us .about_us_text {
+    padding: 10px 30px;
+  }
+  .homepage_about_us .about_us_text h2, .homepage_about_us .about_us_text h3 {
+    font-family: 'Ubuntu Medium';
+    font-size: 60px;
+    color: ;
+  }
+  .homepage_about_us .about_us_text .about_content {
+    font-family: 'Ubuntu Light';
+    font-size: 23px !important;
+    color: black;
+    margin: 20px 0px;
+  }
+  .homepage_about_us .about_us_text .about_content p, .homepage_about_us .about_us_text .about_content span {
+    font-size: 23px !important;
+  }
+  .homepage_about_us .about_us_text .about_btn {
+    margin: 20px 0px;
+  }
+  @media (max-width: ) {
+    .homepage_about_us {
+      padding: 25px 0;
+    }
+    .homepage_about_us .banner_picture, .homepage_about_us .slider_picture {
+      height: 100%;
+    }
+  }
+  /* END ABOUT */
+
+
+  /* FOOTER */
+  .footer {
+    color: ;
+    position: relative;
+    width: 100%;
+    min-height: 30%;
+    padding: 50px 0;
+    overflow-x: clip;
+    overflow-y: clip;
+  }
+  .footer .banner_picture, .footer .slider_picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    background: var(--main-80);
+  }
+  .footer .footer_logo_cont {
+    text-align: left;
+  }
+  .footer .footer_logo {
+    filter: brightness(0) invert(1);
+    max-height: 120px;
+    margin-bottom: 50px;
+  }
+  .footer .footer_links {
+    font-family: 'Ubuntu Bold';
+    font-size: 22px;
+    text-align: left;
+  }
+  .footer .footer_links div {
+    margin: 10px;
+    font-family: 'Ubuntu Bold';
+    font-size: 22px;
+    text-align: left;
+  }
+  .footer .footer_links a {
+    color: ;
+    font-family: 'Ubuntu Bold';
+    font-size: 22px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .footer .footer_links a:hover {
+    font-weight: bold;
+    opacity: 0.65;
+  }
+  .footer .footer_links i {
+    color: ;
+  }
+  .footer .footer_links span {
+    font-family: 'Ubuntu Light';
+    font-size: 21px;
+    margin-left: 24px;
+  }
+  .footer .footer_navbar .footer_link {
+    font-family: 'Ubuntu Light';
+    font-size: 22px;
+    text-align: left;
+    margin: 10px;
+  }
+  .footer .footer_navbar .footer_link a {
+    color: ;
+    font-family: 'Ubuntu Light';
+    font-size: 22px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .footer .footer_navbar .footer_link a:hover {
+    font-weight: bold;
+    opacity: 0.65;
+  }
+  .footer .footer_social {
+    margin-top: 30px !important;
+    margin-left: 20px !important;
+  }
+  .footer .footer_social [class*="fa fa-"] {
+    background-color: ;
+    border-radius: 30px;
+    color: ;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    margin: auto 5px;
+    width: 45px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .footer .footer_social [class*="fa fa-"]:hover {
+    transform: matrix(1.07, 0, 0, 1.07, 0, 0);
+    transform-origin: 50% 50% 0;
+    transition: all 0.2s ease-out;
+  }
+  @media (max-width: ) {
+    .footer {
+      padding: 25px 0;
+    }
+    .footer .banner_picture, .footer .slider_picture {
+      height: 100%;
+    }
+    .footer .why_us_btn, .footer .why_us_points {
+      margin-top: 25px;
+    }
+    .footer .footer_logo_cont {
+      text-align: center;
+    }
+    .footer .footer_logo {
+      max-height: 100px;
+      margin-bottom: 50px;
+    }
+    .footer .footer_navbar {
+      padding-left: 20px;
+    }
+  }
+  @media (max-width: ) {
+    .footer .footer_navbar {
+      margin-top: 50px;
+      padding-left: 20px;
+    }
+  }
+  .copyright {
+    background-color: #205ca7;
+    font-family: 'Ubuntu Light';
+    font-size: 22px;
+    text-align: left;
+  }
+  .copyright a {
+    color: white;
+  }
+  /* END FOOTER */

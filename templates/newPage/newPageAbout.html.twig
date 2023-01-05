@@ -1,26 +1,20 @@
 
 <!-- About Page -->
-<section class="about">
-	<div class="container text-center">
+<section class="homepage_about_us" id="aboutUs">
+	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-6 col-sm-push-6 about_us_text">
 				<h1> {{ about.header.title }}</h1>
-					<div class="row">
-						<div class="col-sm-12">
-							<h4>{{ about.header.subtitle }}</h4>
-							<p> {{ about.section.content }} </p>
-							<p> Learn more <a target="_blank" href="{{ path("about_us") }}"> here. </a></p>
-
-						</div>
-					</div>
+				<h4>{{ about.header.subtitle }}</h4>
+			<div class="about_content">
+				<p> {{ about.section.content | slice(0, 178) |raw }} </p>
 			</div>
-			<div class="col-sm-4">
-				<img src="{{ asset('templates/images/homepage_background_about.png') }}" alt="about"/>
+			<div  class="about_btn">
+				 <a href="{{ path("about_us") }}" class="btn btn-installer btn-main"> READ MORE</a>
 			</div>
-		</div>			
+		</div>
+		<div class="col-sm-6 col-sm-pull-6">
+			<img src="{{ asset('/images/homepage_background_about.png') }}" alt="about"/>
+		</div>
 	</div>
 </section>
-<br>
-<br>
-<!-- End About Page -->
-

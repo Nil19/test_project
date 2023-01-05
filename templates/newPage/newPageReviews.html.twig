@@ -1,26 +1,40 @@
 <!-- Reviews Page -->
-<section>
-	<div class="container">
+<section class="homepage_reviews" id="reviews">>
+	<div class="container_review">
 		<div class="row">
-			<div class="col col-sm">
-				<h2>REVIEWS</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="owl-carousel owl-theme">
-				{% for reviews in reviews.data.items %}
-						<div class="item">
-							<div>
-								<h4>{{reviews.content.title}}</h4>
-							</div>
-							<div>
-							{{ reviews.completed.date | slice(0, 10) }}
-							</div>
-							<div>
-								{{reviews.content.content}}
-							</div>
+			<div class="col-lg-6 col-md-12 reviews_content carousel-wrap">
+				<h2 class="title">REVIEWS</h2>
+					<div class="owl-carousel owl-review  review_carousel">
+						{% for reviews in reviews.data.items %}
+								<div class="review">
+									<div class="stars">
+										{% for img in 1..reviews.rating %}
+											<i class="fa fa-star fa-2x"></i>
+										{% endfor %}
+							   			 {% for img in reviews.rating..5 %}
+										{% if not loop.first %}
+											<i class="fa fa-star fa-2x empty"></i>
+										{% endif %}
+										{% endfor %}
+									</div>
+									<div class="title">
+										{{reviews.content.title | slice(0, 100)}}
+											{% if reviews.content.title | length > 100 %}...
+											{% endif %}
+									</div>
+									<div class="text">
+										{{reviews.content.content | slice(0, 230)}}
+											{% if reviews.content.content |length > 230 %}...
+											{% endif %}
+									</div>
+								</div>
+						{% endfor %}
+					</div>
+						<div  class="review_btn">
+						<a href="{{ path('reviews') }}" class="btn btn-installer btn-main">
+							GO TO REVIEWS
+						</a>
 						</div>
-				{% endfor %}
 			</div>
 		</div>
 	</div>				
