@@ -9,6 +9,7 @@ body {
 
 /* HEADER */
 .header_banner {
+    background: url(/public/build/images/homepage_banner.png);
     min-height: auto;
     position: relative;
     width: 100%;
@@ -20,7 +21,7 @@ body {
   .banner_box {
     min-height: fit-content;
     padding: 30px 30px;
-    background-color: #9797ca;
+    background: url(/public/build/images/homepage_background_why_choose_us.png);
     border-radius: 50px 0px 50px 0px !important;
     color: white;
     background-size: cover;
@@ -147,6 +148,116 @@ body {
     }
   }
   /* END ABOUT */
+
+  /* REVIEWs */
+  .homepage_reviews {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    overflow-x: clip;
+    overflow-y: clip;
+  }
+  .homepage_reviews .container_review {
+    margin: 0px 80px;
+  }
+  .homepage_reviews .reviews_image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 70%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .homepage_reviews .reviews_content {
+    padding-left: 10px;
+    padding-right: 100px;
+  }
+  .homepage_reviews .reviews_content h2.title, .homepage_reviews .reviews_content h3.title {
+    font-family: "Ubuntu Medium";
+    font-size: 60px;
+    color: var(--main);
+    margin: 50px 0px;
+  }
+  .homepage_reviews .reviews_content .subtitle {
+    font-family: "Ubuntu Medium";
+    font-size: 26px;
+    color: var(--main);
+  }
+  .homepage_reviews .reviews_content .review_carousel .stars {
+    padding-top: 20pxite;
+    font-size: 20px;
+  }
+  .homepage_reviews .reviews_content .review_carousel .stars i {
+    color: #2b223a;
+  }
+  .homepage_reviews .reviews_content .review_carousel .title {
+    padding-top: 20px;
+    font-family: "Ubuntu Medium";
+    font-size: 26px;
+  }
+  .homepage_reviews .reviews_content .review_carousel .text {
+    padding-top: 20px;
+    font-family: "Ubuntu Light";
+    font-size: 22px;
+    color: black;
+  }
+  .homepage_reviews .reviews_content .review_btn {
+    margin: 20px 0px 50px;
+  }
+  .homepage_reviews .owl-review .nav-btn {
+    height: 47px;
+    position: absolute;
+    width: 26px;
+    cursor: pointer;
+    top: 45% !important;
+  }
+  .homepage_reviews .owl-review .owl-prev.disabled,
+  .homepage_reviews .owl-review .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+  .homepage_reviews .owl-review .reviews_content {
+    padding: 20px;
+  }
+  .homepage_reviews .owl-review .container_review {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .homepage_reviews .owl-review .review_btn {
+    text-align: center;
+  }
+  .homepage_reviews .owl-review .owl-review .owl-nav {
+    display: none;
+  }
+  .homepage_reviews .owl-review .owl-review .owl-dots {
+    text-align: center;
+    display: block;
+    padding-top: 20px;
+  }
+  .homepage_reviews .owl-review .owl-review .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #d6d6d6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 0.2s ease;
+    border-radius: 30px;
+  }
+  .homepage_reviews .owl-review .owl-review .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+  }
+  .homepage_reviews .owl-review .owl-review .owl-dots .owl-dot span {
+    background-color: var(--main-80);
+  }
+  .homepage_reviews .owl-review .owl-review .owl-dots .owl-dot.active span,
+  .homepage_reviews .owl-review .owl-review .owl-dots .owl-dot:hover span {
+    background-color: var(--main-80);
+  }
+  /* END REVIEWS
 
 
   /* FOOTER */

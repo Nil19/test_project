@@ -28,12 +28,13 @@ $(document).ready(function () {
 
 console.log('Main   assets imported');
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     $(".owl-carousel").owlCarousel({
     });
 
 });
-/* $(document).ready(function () {
+*/
+$(document).ready(function () {
     var owlreviews = $('.owl-review');
     owlreviews.owlCarousel({
         loop: true,
@@ -56,7 +57,7 @@ $(document).ready(function(){
         }
     });
 });
-*/
+
 
 $(document).ready(function () {
 	$('ul.nav li.dropdown').hover(
